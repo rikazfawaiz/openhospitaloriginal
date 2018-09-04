@@ -1,0 +1,17 @@
+[08/Jul/2018 15:17:19] [:] INFO - 
+
+=====================
+Starting OpenHospital
+=====================
+ (org.isf.menu.gui.Menu.createAndShowGUI(Menu.java:26))
+[08/Jul/2018 15:17:19] [:] INFO - OpenHospital version 1.8.3 (org.isf.menu.gui.Menu.checkOHVersion(Menu.java:37))
+[08/Jul/2018 15:17:19] [:] INFO - Java version 1.8.0_162 (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:43))
+[08/Jul/2018 15:17:19] [:] INFO - float te kabaca (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:45))
+[08/Jul/2018 15:17:27] [:] INFO - File generalData.properties loaded.  (org.isf.generaldata.GeneralData.<init>(GeneralData.java:98))
+[08/Jul/2018 15:17:27] [:] INFO - Debug: OpenHospital in debug mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:108))
+[08/Jul/2018 15:17:27] [:] INFO - Logging: Single User mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:124))
+[08/Jul/2018 15:17:27] [admin:admin] DEBUG - Query select mn.*,GROUPMENU.GM_ACTIVE from USERGROUP inner join USER on US_UG_ID_A=UG_ID_A  inner join GROUPMENU on UG_ID_A=GM_UG_ID_A inner join MENUITEM as mn on  GM_MNI_ID_A=mn.MNI_ID_A where US_ID_A = ? order by MNI_POSITION (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[08/Jul/2018 15:17:29] [admin:admin] ERROR - No XMPP Server seems to be running: set XMPPMODULEENABLED = false (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:166))
+[08/Jul/2018 15:17:33] [admin:admin] DEBUG - Query select * from DISEASETYPE order by DCL_DESC (org.isf.utils.db.DbQueryLogger.getData(DbQueryLogger.java:38))
+[08/Jul/2018 15:17:33] [admin:admin] DEBUG - Query select * from DISEASE join DISEASETYPE on DIS_DCL_ID_A = DCL_ID_A where  (DIS_OPD_INCLUDE=1 or DIS_OPD_INCLUDE is null)  order BY DIS_DESC (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[08/Jul/2018 15:17:33] [admin:admin] DEBUG - Query SELECT * FROM OPD LEFT JOIN PATIENT ON OPD_PAT_ID = PAT_ID LEFT JOIN DISEASE ON OPD_DIS_ID_A = DIS_ID_A LEFT JOIN DISEASETYPE ON DIS_DCL_ID_A = DCL_ID_A WHERE 1 AND OPD_DATE_VIS BETWEEN ? AND ? ORDER BY OPD_DATE_VIS (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))

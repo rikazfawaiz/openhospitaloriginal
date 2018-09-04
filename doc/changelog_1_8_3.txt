@@ -1,0 +1,178 @@
+1.
+	19/01/2017 - org.isf.medicalstockward.gui.WardPharmacyRectify
+			   - org.isf.medicalstockward.service.IoOperations
+			   
+			   - bundle/language_xx.properties
+			   
+	Fixed the Rectify function in Pharmaceutical Stock Ward
+===============================================================================================
+2.
+	27/01/2017 - org.isf.patvac.gui.PatVacBrowser
+		       - org.isf.patvac.gui.PatVacEdit
+		       - org.isf.patvac.model.PatientVaccine
+		       - org.isf.patvac.service.IoOperations
+		       
+	Fixed CRUD and descending sorter for PatientVaccines list
+===============================================================================================
+3.
+	27/01/2017 - rpt/diseaselist.jasper
+			   - rpt/diseaselist.jrxml
+			   
+	Fixed Disease List printing report
+===============================================================================================
+4.
+	31/01/2017 - org.isf.patient.gui.PatientInsertExtended
+	
+	Fixed patient duplicates check
+===============================================================================================
+5.
+	31/01/2017 - org.isf.therapy.gui.TherapyEdit
+			   - org.isf.visits.manager.VisitManager
+			   - org.isf.visits.model.Visit
+			   - org.isf.visits.service.IoOperations
+	
+	Simplified the Visit model
+===============================================================================================
+6.
+	06/02/2017 - org.isf.opd.gui.OpdEditExtended
+			   - org.isf.patcav.gui.PatVacEdit
+			   
+	Avoid updating age when editing and old Opd, PatientVaccine and Laboratories
+===============================================================================================
+7.
+	07/02/2017 - org.isf.patient.gui.PatientInsert
+	
+	Fixed patient duplicates check
+===============================================================================================
+8.
+	03/03/2017 - org.isf.utils.excel.ExcelExporter
+	
+	Improved Excel filesize and styles
+===============================================================================================
+9.
+	04/03/2017 - org.isf.menu.gui.UserEdit
+	
+	Fixed a bug in updating user details 
+	(thanks to Ziad Al-Zein <zalzein2010@hotmail.com>)
+===============================================================================================
+10.
+	19/04/2017 - org.isf.medicalstock.gui.MovStockMultipleCharging
+			   - org.isf.medicalstock.gui.MovStockMultipleDischarging
+			   
+	Fixed a bug that was allowing negative quantities
+===============================================================================================
+11.
+	21/04/2017 - org.isf.stat.mamager.GenericReportFromDateToDate
+			   - org.isf.stat.manager.GenericReportMY
+			   - org.isf.utils.excel.ExcelExporter
+			   
+			   --> lib/dom4j-1.6.1.jar
+			   <-- lib/poi-3.0.1-FINAL-20070705.jar
+			   --> lib/poi-3.7.jar
+			   --> lib/poi-ooxml-3.7.jar
+			   --> lib/poi-ooxml-schemas-3.7.jar
+			   --> lib/xmlbeans-2.3.0.jar
+			   
+	Added new libraries in order to go beyond the limit of 65536 rows in Excel 2010. 
+	Kept compatibility with Excel 97-2003 through the file chooser ("save as" dialog)
+===============================================================================================
+12.
+	21/04/2017 - org.isf.generaldata.TxtPrinter
+			   - org.isf.serviceprinting.manager.PrintReceipt
+			   - org.isf.stat.manager.GenericReportBill
+			   - org.isf.stat.manager.GenericReportUserInDate
+			   
+			   - doc/AdminManual.pdf
+			   --> rpt/PatientBillPDF.jasper	   
+			   --> rpt/PatientBillPDF.jrxml
+			   - rsc/txtPrinter.properties
+			   
+	Improved Text Printer with better handle of TXT and PDF multipage bills.
+===============================================================================================
+13.
+	08/05/2017 - rpt/patient_clinical_sheet_patsubreport.jrxml
+			   - rpt/patient_clinical_sheet_ver2.jasper
+			   
+	Improved Clinical Sheet Report in order to show at least the first page with the patient's 
+	details
+================================================================================================
+14.
+	08/05/2017 - doc/AdminManual.pdf
+			   - rsc/version.properties
+	
+	Updated AdminManual version to 1.8.3
+================================================================================================
+15.
+	08/05/2017 - poh_files/oh.bat
+			   - poh_files/oh.sh
+			   - startup.cmd
+			   - startup.sh
+			    
+	
+	Added support for high dpi monitor in launchers
+================================================================================================
+16.
+	08/05/2017 - distribution_files/CHANGELOG
+	
+	Updated CHANGELOG for distribution package
+================================================================================================
+17.
+	08/05/2017 - changelog_next_version --> changelog_1_8_3.txt
+			   - poh_files/oh.bat --> poh_files/win32/oh.bat
+			   - poh_files/oh.sh --> poh_files/linux/oh.sh
+			   --> poh_files/linux/rsc/database.properties.ori
+			   --> poh_files/linux/rsc/dicom.properties.ori
+			   --> poh_files/linux/rsc/h8.properties.ori
+			   --> poh_files/linux/rsc/log4j.properties.ori
+			   --> poh_files/linux/Changelog
+			   --> poh_files/linux/README
+			   --> poh_files/win32/Changelog
+			   --> poh_files/win32/README
+			   --> poh_files/win32/TODO
+			   - build.properties
+			   - build.xml
+			   
+	Enhanced Ant build in order to build portable versions too (only OpenHospital part)
+================================================================================================
+18.
+	04/06/2017 --> poh_files/win32/openhospital/oh/rsc/database.properties
+			   --> poh_files/win32/openhospital/oh/rsc/dicom.properties.ori
+			   --> poh_files/win32/openhospital/Changelog
+			   --> poh_files/win32/openhospital/oh.bat
+			   --> poh_files/win32/openhospital/README
+			   --> poh_files/win32/openhospital/TODO
+			   - build.xml
+			   
+	Fixed Ant script and added missing poh-win32 files
+================================================================================================
+19.
+	04/06/2017 - rpt/BillsReport.jasper
+			   - rpt/BillsReport.jrxml
+			   - rpt/BillsReportMonth.jasper
+			   - rpt/BillsReportMonth.jrxml
+			   - rpt/OH004_IncomesAllByPriceCodes.jasper
+			   - rpt/OH004_IncomesAllByPriceCodes.jrxml
+			   
+	New version of some accounting reports
+================================================================================================
+20.
+	04/06/2017 - org.isf.admission.gui.PatientDataBrowser
+			   - org.isf.opd.gui.OpdBrowser
+			   - org.isf.opd.gui.OpdEdit
+			   - org.isf.opd.gui.OpdEditExtended
+			   
+	Fixed a bug on edit/update OPD records
+================================================================================================
+21.
+	04/06/2017 - poh_files/win32/openhospital/oh.bat
+	
+	Fixed oh.bat in order to perform silent copy
+================================================================================================
+22.
+	04/06/2017 --> poh_files/linux/rsc/dicom.properties
+			   --> poh_files/win32/openhospital/oh/rsc/h8.properties
+			   --> poh_files/win32/openhospital/oh/rsc/log4j.properties
+			   --> poh_files/win32/openhospital/oh/rsc/dicom.properties
+			   
+	Added files that need to be overwritten in poh-win32 and poh-linux
+================================================================================================

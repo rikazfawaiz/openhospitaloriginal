@@ -1,0 +1,22 @@
+[02/Jul/2018 10:54:04] [:] INFO - 
+
+=====================
+Starting OpenHospital
+=====================
+ (org.isf.menu.gui.Menu.createAndShowGUI(Menu.java:26))
+[02/Jul/2018 10:54:04] [:] INFO - OpenHospital version 1.8.3 (org.isf.menu.gui.Menu.checkOHVersion(Menu.java:37))
+[02/Jul/2018 10:54:04] [:] INFO - Java version 1.8.0_162 (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:43))
+[02/Jul/2018 10:54:04] [:] INFO - float te kabaca (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:45))
+[02/Jul/2018 10:54:08] [:] INFO - File generalData.properties loaded.  (org.isf.generaldata.GeneralData.<init>(GeneralData.java:98))
+[02/Jul/2018 10:54:08] [:] INFO - Debug: OpenHospital in debug mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:108))
+[02/Jul/2018 10:54:08] [:] INFO - Logging: Single User mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:124))
+[02/Jul/2018 10:54:08] [admin:admin] DEBUG - Query select mn.*,GROUPMENU.GM_ACTIVE from USERGROUP inner join USER on US_UG_ID_A=UG_ID_A  inner join GROUPMENU on UG_ID_A=GM_UG_ID_A inner join MENUITEM as mn on  GM_MNI_ID_A=mn.MNI_ID_A where US_ID_A = ? order by MNI_POSITION (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 10:54:11] [admin:admin] ERROR - No XMPP Server seems to be running: set XMPPMODULEENABLED = false (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:166))
+[02/Jul/2018 10:54:18] [admin:admin] DEBUG - Query SELECT PAT.*, ADM.* FROM PATIENT PAT LEFT JOIN (SELECT * FROM ADMISSION WHERE (ADM_DELETED=\'N\' or ADM_DELETED is null) AND ADM_IN = 1) ADM ON ADM.ADM_PAT_ID = PAT.PAT_ID WHERE (PAT.PAT_DELETED=\'N\' or PAT.PAT_DELETED is null)  ORDER BY PAT_ID DESC (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 10:54:19] [admin:admin] DEBUG - Query SELECT * FROM WARD (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 10:57:04] [admin:admin] DEBUG - Query SELECT PAT.*, ADM.* FROM PATIENT PAT LEFT JOIN (SELECT * FROM ADMISSION WHERE (ADM_DELETED=\'N\' or ADM_DELETED is null) AND ADM_IN = 1) ADM ON ADM.ADM_PAT_ID = PAT.PAT_ID WHERE (PAT.PAT_DELETED=\'N\' or PAT.PAT_DELETED is null)  ORDER BY PAT_ID DESC (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 10:57:04] [admin:admin] DEBUG - Query SELECT * FROM WARD (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 12:07:49] [admin:admin] DEBUG - Query SELECT PAT.*, ADM.* FROM PATIENT PAT LEFT JOIN (SELECT * FROM ADMISSION WHERE (ADM_DELETED=\'N\' or ADM_DELETED is null) AND ADM_IN = 1) ADM ON ADM.ADM_PAT_ID = PAT.PAT_ID WHERE (PAT.PAT_DELETED=\'N\' or PAT.PAT_DELETED is null)  ORDER BY PAT_ID DESC (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 12:07:49] [admin:admin] DEBUG - Query SELECT * FROM WARD (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[02/Jul/2018 12:08:09] [admin:admin] DEBUG - Query SELECT MAX(PAT_ID) FROM PATIENT (org.isf.utils.db.DbQueryLogger.getData(DbQueryLogger.java:38))
+[02/Jul/2018 12:21:54] [admin:admin] DEBUG - Query SELECT MAX(PAT_ID) FROM PATIENT (org.isf.utils.db.DbQueryLogger.getData(DbQueryLogger.java:38))

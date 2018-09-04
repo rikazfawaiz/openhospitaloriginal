@@ -1,0 +1,23 @@
+[03/Jul/2018 15:06:35] [:] INFO - 
+
+=====================
+Starting OpenHospital
+=====================
+ (org.isf.menu.gui.Menu.createAndShowGUI(Menu.java:26))
+[03/Jul/2018 15:06:35] [:] INFO - OpenHospital version 1.8.3 (org.isf.menu.gui.Menu.checkOHVersion(Menu.java:37))
+[03/Jul/2018 15:06:35] [:] INFO - Java version 1.8.0_162 (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:43))
+[03/Jul/2018 15:06:35] [:] INFO - float te kabaca (org.isf.menu.gui.Menu.checkJavaVersion(Menu.java:45))
+[03/Jul/2018 15:06:40] [:] INFO - File generalData.properties loaded.  (org.isf.generaldata.GeneralData.<init>(GeneralData.java:98))
+[03/Jul/2018 15:06:41] [:] INFO - Debug: OpenHospital in debug mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:108))
+[03/Jul/2018 15:06:41] [:] INFO - Logging: Single User mode. (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:124))
+[03/Jul/2018 15:06:41] [admin:admin] DEBUG - Query select mn.*,GROUPMENU.GM_ACTIVE from USERGROUP inner join USER on US_UG_ID_A=UG_ID_A  inner join GROUPMENU on UG_ID_A=GM_UG_ID_A inner join MENUITEM as mn on  GM_MNI_ID_A=mn.MNI_ID_A where US_ID_A = ? order by MNI_POSITION (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[03/Jul/2018 15:06:42] [admin:admin] ERROR - No XMPP Server seems to be running: set XMPPMODULEENABLED = false (org.isf.menu.gui.MainMenu.<init>(MainMenu.java:166))
+[03/Jul/2018 15:11:57] [admin:admin] DEBUG - Query SELECT PAT.*, ADM.* FROM PATIENT PAT LEFT JOIN (SELECT * FROM ADMISSION WHERE (ADM_DELETED=\'N\' or ADM_DELETED is null) AND ADM_IN = 1) ADM ON ADM.ADM_PAT_ID = PAT.PAT_ID WHERE (PAT.PAT_DELETED=\'N\' or PAT.PAT_DELETED is null)  ORDER BY PAT_ID DESC (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[03/Jul/2018 15:11:58] [admin:admin] DEBUG - Query SELECT * FROM WARD (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[03/Jul/2018 15:12:00] [admin:admin] DEBUG - Query SELECT MAX(PAT_ID) FROM PATIENT (org.isf.utils.db.DbQueryLogger.getData(DbQueryLogger.java:38))
+[03/Jul/2018 16:48:02] [admin:admin] DEBUG - Query SELECT PAT_LOCK FROM PATIENT  WHERE PAT_ID = ? (org.isf.utils.db.DbQueryLogger.getDataWithParams(DbQueryLogger.java:62))
+[03/Jul/2018 16:48:03] [admin:admin] DEBUG - Query UPDATE PATIENT SET PAT_FNAME = ?, PAT_SNAME = ?, PAT_NAME  = ?, PAT_BDATE = ?, PAT_AGE = ?, PAT_AGETYPE = ?, PAT_SEX = ?, PAT_ADDR = ?, PAT_CITY = ?, PAT_NEXT_KIN = ?, PAT_TELE = ?, PAT_MOTH = ?, PAT_MOTH_NAME = ?, PAT_FATH = ?, PAT_FATH_NAME = ?, PAT_BTYPE = ?, PAT_ESTA = ?, PAT_PTOGE = ?, PAT_NOTE = ?, PAT_TAXCODE = ?, PAT_LOCK = ?, PAT_PHOTO = ? WHERE PAT_ID = ? (org.isf.utils.db.DbQueryLogger.setDataWithParams(DbQueryLogger.java:121))
+[03/Jul/2018 16:48:11] [admin:admin] DEBUG - Photo not deleted (org.isf.video.gui.PatientPhotoPanel$1.actionPerformed(PatientPhotoPanel.java:104))
+[03/Jul/2018 16:48:29] [admin:admin] DEBUG - Deleted (org.isf.video.gui.PatientPhotoPanel$1.actionPerformed(PatientPhotoPanel.java:102))
+[03/Jul/2018 16:49:01] [admin:admin] DEBUG - Photo not deleted (org.isf.video.gui.PatientPhotoPanel$1.actionPerformed(PatientPhotoPanel.java:104))
+[03/Jul/2018 16:49:10] [admin:admin] DEBUG - Deleted (org.isf.video.gui.PatientPhotoPanel$1.actionPerformed(PatientPhotoPanel.java:102))
